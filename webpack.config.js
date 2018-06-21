@@ -9,10 +9,8 @@ const  HTMLWebpackPluginConfig = new HtmlwebpackPlugin({
 })
 
 module.exports = {
-  // entry: './src/index.tsx',
   entry: [
     './src/index.tsx',
-    // 'webpack-hot-middleware/client?http://localhost:3000'// host 與 port
   ],
   output: {
     path: './dist',
