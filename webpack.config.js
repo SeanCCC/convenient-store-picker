@@ -21,11 +21,18 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader'
+        use: ['ts-loader']
+      },
+      {
+        test: /\.tsx?$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+        // options: { /* Loader options go here */ }
       },
       {
         test: /\.js$/,
-        loader: 'source-map-loader'
+        enforce: "pre",
+        use: ['source-map-loader']
       },
       {
         test: /\.sass$/,
