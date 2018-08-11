@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import ConvinientStorePicker from './container/ConvinientStorePicker';
+import Home from './components/Home';
 import './index.scss';
 
 ReactDOM.render(
 	<div className="test">
-    <ConvinientStorePicker/>
+    <Home/>
   </div>,
 	document.getElementById('app'),
 );
