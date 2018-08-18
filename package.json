@@ -14,9 +14,12 @@
     "@types/react-dom": "^16.0.6",
     "antd": "^3.6.3",
     "es6-promise": "^4.2.4",
+    "file-loader": "^1.1.11",
     "lodash.isequal": "^4.5.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "semantic-ui-css": "^2.3.3",
+    "semantic-ui-react": "^0.82.2"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",

@@ -11,7 +11,14 @@ class Home extends Component {
   render() {
     const storeSearch = new StoreSearch();
     return (
-      <ConvinientStorePicker storeSearch={storeSearch}/>
+      <ConvinientStorePicker
+        storeSearch={storeSearch}
+        onSelect={
+          (data:any) => {
+            console.log({ data });
+          }
+        }
+      />
     );
   }
 }

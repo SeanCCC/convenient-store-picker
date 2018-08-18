@@ -1,3 +1,45 @@
 .test {
-    color: red;
+    // top: 20px;
+    // left: 20px;
+    // height: 200px;
+    // width: 512px;
+    position: relative;
+}
+
+.ConvinientStorePicker {
+    padding: 10px;
+    .options-container {
+        margin-top: 10px;
+        min-height: 36px;
+        .option-btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .stepper-container {
+        margin-top: 20px;
+    }
+    .segment-list {
+        .left-segment {
+            border-left: none !important;
+            width: 70%;
+            color: gray;
+            .header {
+                font-weight: 500;
+                color: #545050;
+                margin-bottom: 5px;
+            }
+        }
+        .right-segment {
+            border-left: none !important;
+            width: 30%;
+            .ui.button {
+                position: relative;
+                padding: 1em;
+                top:50%;
+                transform:translateY(-50%);
+
+            }
+        }
+    }
 }
