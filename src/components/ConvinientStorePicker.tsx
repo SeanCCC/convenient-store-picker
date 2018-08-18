@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Promise } from 'es6-promise';
 const Component = React.Component;
 
 export interface Props {
@@ -7,7 +6,7 @@ export interface Props {
 }
 
 export interface States {
-  selectedBrand: String;
+  stage: Number;
   selectedCity: String;
   selectedDist: String;
   selectedStreet: String;
@@ -21,10 +20,10 @@ class ConvinientStorePicker extends Component<Props, States> {
   constructor(props: any) {
     super(props);
     this.state = {
-      selectedBrand: '7-11',
-      selectedCity: '台北市',
-      selectedDist: '松山區',
-      selectedStreet: '撫遠街',
+      stage: 0,
+      selectedCity: null,
+      selectedDist: null,
+      selectedStreet: null,
       brandOptions: [],
       cityOptions: [],
       distOptions: [],
@@ -32,18 +31,15 @@ class ConvinientStorePicker extends Component<Props, States> {
     };
   }
 
-  setStateAsync(state: any) {
-    return new Promise((resolve: any) => {
-      this.setState(state, resolve);
-    });
-  }
-
   async componentDidMount() {
-    const cityList =  await this.props.storeSearch.listCity();
-    this.setState({
-      cityOptions: cityList,
-      ...this.state,
-    });
+    const cityList =  await this.props.storeSearch.listCity()
+    .then(
+      (res:any) => {
+        console.log({ res });
+        this.setState({ cityOptions: res });
+        return res;
+      },
+    );
   }
 
   render() {
